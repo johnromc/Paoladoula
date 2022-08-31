@@ -28,24 +28,29 @@ header{
 }
 
 /* ---------Menu--------- */
+
 .header{
     width: 100%;
+    height: 100vh;
+    background-color: var(--rose);
 }
-.top_menu{
-    width: 90%;
-    position: absolute;
+/* navigation */
+nav{
+    height: 100px;
+    width: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-left: 3%;
-    padding-top: 10px;
+}
+.logo{
+    width: 70px;
+    margin-left: 20px;
     z-index: 999;
 }
-.top_menu img{
-    width: 77px;
-    height: 38px;
+.hamburger{
+    z-index: 999;
 }
+
 .panel{
     width: 100%;
     top: 0;
@@ -60,19 +65,24 @@ header{
     align-items: center;
     z-index: 998;
     transition: transform .3s ease;
-    transform: translate(0,-100%);
+    transform: translate(0, -100%);
+}
+.panel li{
+    display: block;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all 0.5s;
+}
+.panel li a{
+    color: var(--white);
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-family: var(--nunito);
+    text-decoration: none;
 }
 .panel.active{
-    transform: translate(0,0);
-}
-.panel a{
-    color: var(--white);
-    font-size: 3rem;
-    font-family: var(--nunito);
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding-bottom: 20px;
+    transform: translate(0, 0);
 }
 .hamburger-inner,
 .hamburger-inner::before,
@@ -358,3 +368,269 @@ footer{
     font-size: 1.4rem;
     color: var(--rose);
 }
+
+
+
+/* Responsive desktop */
+
+
+@media screen and (min-width:768px){
+    .header{
+        background: url(./assets/banner.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .logo{
+        width: 140px;
+        margin-left: 80px;
+    }
+    nav{
+        height: 100px;
+    }
+    .hamburger{
+        display: none;
+    }
+    .panel{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        transform: none;
+    }
+    .panel li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .panel li a{
+        font-size: 2rem;
+    }
+
+    /* TITLE BANNER */
+
+    .banner{
+        width: 90%;
+        height: 80vh;
+        display: flex;
+        flex-direction: row;
+        margin: auto 0;
+
+    }
+
+    .title_banner{
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .title_banner h2{
+        font-size: 4rem;
+        
+    }
+    .title_banner h1{
+        font-size: 6rem;
+        color: var(--pink);
+    }
+    .title_banner p{
+        font-size: 2rem;
+        width: 500px;
+        line-height: 3rem;
+    }
+    .title_banner a{
+        width: 150px;
+        height: 50px;
+        color: var(--white);
+        background-color: var(--rose);
+        font-size: 2rem;
+        padding: 30px 10px;
+    }
+    .img_banner{
+        display: none;
+    }
+
+
+
+    /* -----MAIN----- */
+
+
+    .mision{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+    }
+    .mision img{
+        width: 40%;
+    }
+    .mision p{
+        width: 50%;
+        font-size: 4rem;
+
+    }
+    .mision p span{
+        font-size: 4rem;
+    }
+    .button{
+        width: 200px;
+        height: 50px;
+        font-size: 2rem;
+    }
+
+    /* --------SERVICIOS-------- */
+    
+
+    .title_container h2{
+        font-size: 4rem;
+    }
+    .text{
+        font-size: 2rem;
+    }
+    .gestacion{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .gestacion img{
+        width: 40%;
+    }
+    .gestacion h3{
+        font-size: 3.5rem;
+
+    }
+    .gestacion p{
+        font-size: 2rem;
+    }
+    .column{
+        width: 50%;
+        margin: 0 auto;
+
+    }
+    .parto{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .parto img{
+        width: 40%;
+    }
+    .parto h3 {
+        font-size: 3.5rem;
+    
+    }
+    
+    .parto p {
+        font-size: 2rem;
+    }
+    .normal{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .post_parto{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .post_parto img {
+        width: 40%;
+    }
+    
+    .post_parto h3 {
+        font-size: 3.5rem;
+    
+    }
+    
+    .post_parto p {
+            font-size: 2rem;
+    }
+
+    /* ------SOBRE MI------ */
+    .sobre_mi{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 40px;
+    }
+    .sobre_mi img  {
+            width: 40%;
+    }
+    .sobre_mi h3{
+            font-size: 3.5rem;
+    }
+    .sobre_mi p{
+            font-size: 2rem;
+    }
+
+    /* ---------BLOG--------- */
+
+
+    .blog .text{
+        width: 70%;
+        margin: 20px auto;
+        margin-bottom: 40px;
+    }
+    .cards{
+        justify-content: space-evenly;
+
+    }
+    .card{
+       width: 30%; 
+       height: auto;
+    }
+    .card h3{
+        font-size: 2.4rem;
+        font-weight: 600;
+    }
+    .card p{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+    /* ------Footer------ */
+
+    .logo_footer{
+        width: 10%;
+    }
+    .contact_footer{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 30px 0;
+    }
+
+    .title_footer{
+        font-size: 3rem;
+    }
+    .icons{
+        width: 40px;
+    }
+    .text_dates p{
+        font-size: 2rem;
+    }
+.line{
+    border-right: 3px solid #fff;
+}
+
+    /* -------FORM------- */
+
+    .form{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    .controls_form{
+        padding: 20px 50px;
+    }
+    .doble{
+        width: 49%;
+        margin-right: 9px;
+        
+    }
+}   

@@ -13,23 +13,23 @@
   </head>
   <body>
     <header class="header">
-      <div class="menu">
-        <div class="top_menu">
-          <img src="./assets/logo.webp" alt="" />
-          <button class="hamburger hamburger--spring" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
+      <nav>
+        <div>
+          <img class="logo" src="./assets/logo.webp" alt="logo" />
         </div>
-        <div class="panel">
-          <a href="#">Inicio</a>
-          <a href="#">servicios</a>
-          <a href="#">blog</a>
-          <a href="#">sobre mi</a>
-          <a href="#">contacto</a>
-        </div>
-      </div>
+        <button class="hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+        <ul class="panel">
+          <li><a href="">Inicio</a></li>
+          <li><a href="">servicios</a></li>
+          <li><a href="">blog</a></li>
+          <li><a href="">sobre mi</a></li>
+          <li><a href="">contacto</a></li>
+        </ul>
+      </nav>
       <div class="banner">
         <div class="title_banner">
           <h2>¿Quieres conocerme?</h2>
@@ -58,47 +58,62 @@
           </p>
         </div>
       </section>
+
       <section class="title_container servicios">
         <h2>servicios</h2>
         <div class="gestacion">
-          <h3 class="title_services">gestación.</h3>
           <img src="./assets/gestacion_img.webp" alt="" />
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
-            dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
-          </p>
-          <a href="" class="button">ver más</a>
+          <div class="column">
+            <h3 class="title_services">gestación.</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
+              dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
+            </p>
+            <a href="" class="button">ver más</a>
+          </div>
         </div>
         <div class="parto">
           <img src="./assets/parto_img.webp" alt="" />
-          <h3 class="title_services">parto</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
-            dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
-          </p>
-          <a href="" class="button">ver más</a>
+          <div class="normal">
+            <h3 class="title_services">parto</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
+              dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
+            </p>
+            <a href="" class="button">ver más</a>
+          </div>
         </div>
         <div class="post_parto">
           <img src="./assets/post_parto_img.webp" alt="" />
-          <h3 class="title_services">Post-parto</h3>
-          <p class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
-            dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
-          </p>
-          <a href="" class="button">ver más</a>
+          <div class="column">
+            <h3 class="title_services">Post-parto</h3>
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus a
+              dolorem aliquid voluptas illo unde ex ad voluptates commodi sit!
+            </p>
+            <a href="" class="button">ver más</a>
+          </div>
         </div>
       </section>
-      <section class="title_container sobre_mi">
+
+      <section class="title_container">
         <h2>Quien soy yo</h2>
-        <img src="./assets/sobre_mi_img.webp" alt="" />
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi quo
-          eveniet harum repellendus iste laborum corporis quia, explicabo cumque
-          laboriosam consequatur delectus vitae vel quasi natus aliquam dolore
-          asperiores tempore.
-        </p>
-        <a href="" class="button">ver más</a>
+        <div class="sobre_mi">
+          <img src="./assets/sobre_mi_img.webp" alt="" />
+          <div class="column">
+            <h3 class="title_services">Soy Paola Mejía</h3>
+
+            <p class="text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              quo eveniet harum repellendus iste laborum corporis quia,
+              explicabo cumque laboriosam consequatur delectus vitae vel quasi
+              natus aliquam dolore asperiores tempore.
+            </p>
+            <a href="" class="button">ver más</a>
+          </div>
+        </div>
       </section>
+
       <section class="title_container blog">
         <h2>blog</h2>
         <p class="text">
@@ -140,56 +155,58 @@
       <div class="logo_footer">
         <img src="./assets/logo.webp" alt="" />
       </div>
-      <div class="contact_dates">
-        <div class="icons">
-          <img src="./assets/name_icon.png" alt="" />
-          <img src="./assets/mail_icon.svg" alt="" />
-          <img src="./assets/phone_icon.svg" alt="" />
-          <img src="./assets/place_icon.svg" alt="" />
+      <section class="contact_footer">
+        <div class="contact_dates">
+          <div class="icons">
+            <img src="./assets/name_icon.png" alt="" />
+            <img src="./assets/mail_icon.svg" alt="" />
+            <img src="./assets/phone_icon.svg" alt="" />
+            <img src="./assets/place_icon.svg" alt="" />
+          </div>
+          <div class="line"></div>
+          <div class="text_dates">
+            <p>Paola Mejía</p>
+            <p>mail</p>
+            <p>555555555555</p>
+            <p>algun lugar del universo</p>
+          </div>
         </div>
-        <div class="line"></div>
-        <div class="text_dates">
-          <p>Paola Mejía</p>
-          <p>mail</p>
-          <p>555555555555</p>
-          <p>algun lugar del universo</p>
+        <div class="contact_form">
+          <div class="title_footer">
+            <h2>enviame un mensaje</h2>
+          </div>
+          <section class="form">
+            <input
+              class="controls_form doble"
+              type="text"
+              name="nombre"
+              id="nombre"
+              placeholder="Ingrese su nombre"
+            />
+            <input
+              class="controls_form doble"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Ingrese su correo"
+            />
+            <input
+              class="controls_form"
+              type="text"
+              name="asunto"
+              id="asunto"
+              placeholder="Asunto"
+            />
+            <input
+              class="controls_form"
+              type="text"
+              name="mensaje"
+              id="mensaje"
+              placeholder="Mensaje"
+            />
+          </section>
         </div>
-      </div>
-      <div class="contact_form">
-        <div class="title_footer">
-          <h2>enviame un mensaje</h2>
-        </div>
-        <section class="form">
-          <input
-            class="controls_form"
-            type="text"
-            name="nombre"
-            id="nombre"
-            placeholder="Ingrese su nombre"
-          />
-          <input
-            class="controls_form"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Ingrese su correo"
-          />
-          <input
-            class="controls_form"
-            type="text"
-            name="asunto"
-            id="asunto"
-            placeholder="Asunto"
-          />
-          <input
-            class="controls_form"
-            type="text"
-            name="mensaje"
-            id="mensaje"
-            placeholder="Mensaje"
-          />
-        </section>
-      </div>
+      </section>
     </footer>
     <script src="menu.js"></script>
   </body>
